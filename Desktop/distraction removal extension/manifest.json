@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Distraction Killer",
+  "version": "1.0",
+  "description": "Blocks low-value or distracting content using AI.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": [
+    "https://www.reddit.com/*",
+    "https://twitter.com/*",
+    "https://www.youtube.com/*",
+    "https://www.facebook.com/*",
+    "https://www.instagram.com/*",
+    "https://www.flipkart.com/*",
+    "https://flipkart.com/*",
+    "https://www.myntra.com/*",
+    "https://myntra.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.reddit.com/*",
+        "https://twitter.com/*",
+        "https://www.youtube.com/*",
+        "https://www.facebook.com/*",
+        "https://www.instagram.com/*",
+        "https://www.flipkart.com/*",
+        "https://flipkart.com/*",
+        "https://www.myntra.com/*",
+        "https://myntra.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}

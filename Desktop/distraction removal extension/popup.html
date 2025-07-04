@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      width: 220px;
+      padding: 10px;
+    }
+    #timer {
+      font-size: 2em;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <h2 id="status">Not Started</h2>
+  <div id="timer">--:--</div>
+  <button id="startBtn">Start Focus</button>
+  <br /><br />
+  <button id="closeTab">Close Tab</button>
+  <button id="stayHere">Stay Here</button>
+
+  <!-- ✅ Add the audio element -->
+  <audio id="ding" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfae5c7.mp3" preload="auto"></audio>
+
+  <script src="popup.js"></script>
+</body>
+</html>
